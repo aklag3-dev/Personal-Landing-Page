@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Femi Akin-Laguda — Corporate Strategist & Operations Expert</title>
+    <meta name="description" content="I develop solutions to strategic, operational, and growth challenges for companies in fast-changing, disrupted industries.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://femiakinlaguda.com/">
+    <meta property="og:title" content="Femi Akin-Laguda — Corporate Strategist & Operations Expert">
+    <meta property="og:description" content="Building and empowering great teams to drive growth and operational excellence.">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://femiakinlaguda.com/">
+    <meta property="twitter:title" content="Femi Akin-Laguda — Corporate Strategist & Operations Expert">
+    <meta property="twitter:description" content="Building and empowering great teams to drive growth and operational excellence.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+
+    <style>
+        :root {
+            --bg: #020a18;
+            --bg-grad: linear-gradient(170deg, #020a18 0%, #041028 40%, #06142e 70%, #020a18 100%);
+            --surface: rgba(8, 24, 56, 0.85);
+            --border: rgba(0, 170, 255, 0.12);
+            --border-glow: rgba(0, 170, 255, 0.3);
+            --text: #d0e0f0;
+            --text-bright: #e8f0ff;
+            --text-dim: #6888aa;
+            --neon: #00aaff;
+            --cyan: #00e5ff;
+            --green: #00ff88;
+            --amber: #ffaa00;
+            --red: #ff4466;
+            --purple: #aa66ff;
+            --grid: rgba(255, 255, 255, 0.03);
+            --orb-1: rgba(0, 170, 255, 0.08);
+            --orb-2: rgba(0, 229, 255, 0.08);
+            --orb-3: rgba(170, 102, 255, 0.08);
+        }
+
+        html.light {
+            --bg: #f4f7fa;
+            --bg-grad: linear-gradient(170deg, #f4f7fa 0%, #eef2f7 40%, #e2eaf4 70%, #f4f7fa 100%);
+            --surface: rgba(255, 255, 255, 0.85);
+            --border: rgba(0, 102, 204, 0.15);
+            --border-glow: rgba(0, 102, 204, 0.3);
+            --text: #2a3a4a;
+            --text-bright: #111822;
+            --text-dim: #5a7a9a;
+            --neon: #005bb5;
+            --cyan: #0088cc;
+            --green: #008044;
+            --amber: #b86600;
+            --red: #cc1133;
+            --purple: #6622cc;
+            --grid: rgba(0, 0, 0, 0.04);
+            --orb-1: rgba(0, 91, 181, 0.06);
+            --orb-2: rgba(0, 136, 204, 0.06);
+            --orb-3: rgba(102, 34, 204, 0.06);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            font-size: 24px;
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Background Layers */
+        .bg-gradient {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: var(--bg-grad);
+            z-index: -3;
+        }
+
+        .bg-grid {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image:
+                linear-gradient(to right, var(--grid) 1px, transparent 1px),
+                linear-gradient(to bottom, var(--grid) 1px, transparent 1px);
+            background-size: 60px 60px;
+            z-index: -2;
+        }
+
+        .bg-orbs {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            z-index: -1;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            animation: float 20s infinite ease-in-out alternate;
+        }
+
+        .orb-1 {
+            width: 400px; height: 400px;
+            background: var(--orb-1);
+            top: 10%; left: calc(50% - 700px);
+            animation-delay: 0s;
+        }
+
+        .orb-2 {
+            width: 500px; height: 500px;
+            background: var(--orb-2);
+            top: 40%; right: calc(50% - 800px);
+            animation-delay: -5s;
+        }
+
+        .orb-3 {
+            width: 350px; height: 350px;
+            background: var(--orb-3);
+            bottom: -5%; left: calc(50% - 500px);
+            animation-delay: -10s;
+        }
+
+        @keyframes float {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(30px, 50px) scale(1.1); }
+        }
+
+        /* Layout */
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Header Layout */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: var(--surface);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            padding: 24px 0;
+            transition: background 0.3s ease, border-color 0.3s ease, padding 0.3s ease;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .header-brand {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-name {
+            font-weight: 700;
+            font-size: 2.4rem;
+            color: var(--text-bright);
+            letter-spacing: -0.02em;
+            transition: font-size 0.3s ease;
+            white-space: nowrap;
+        }
+
+        /* Navigation Menu Links */
+        .header-nav {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .nav-link {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: all 0.2s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--neon);
+        }
+
+        .header-controls {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .icon-btn {
+            background: transparent;
+            border: 1px solid transparent;
+            color: var(--text-dim);
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+        }
+
+        .icon-btn:hover {
+            color: var(--neon);
+            background: rgba(0, 170, 255, 0.05);
+            border-color: var(--border);
+        }
+
+        .icon-btn svg {
+            width: 24px;
+            height: 24px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        /* Light/Dark Toggle Icons */
+        .sun-icon { display: none; }
+        html.light .sun-icon { display: block; }
+        html.light .moon-icon { display: none; }
+
+        /* Collapse/Expand Icons */
+        .collapse-icon { display: none; }
+        .expand-mode .collapse-icon { display: block; }
+        .expand-mode .expand-icon { display: none; }
+
+        /* Hero */
+        .hero {
+            padding: 60px 0 100px;
+            text-align: left;
+        }
+
+        .hero-role {
+            color: var(--neon);
+            font-weight: 600;
+            font-size: 1.425rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 24px;
+            display: inline-block;
+        }
+
+        .hero h1 {
+            font-size: 5.25rem;
+            font-weight: 700;
+            color: var(--text-bright);
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            margin-bottom: 36px;
+        }
+
+        .hero-line {
+            font-size: 2.25rem;
+            color: var(--text);
+            font-weight: 300;
+            max-width: 820px;
+            margin-bottom: 60px;
+            line-height: 1.4;
+        }
+
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 18px 36px;
+            background: var(--neon);
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 8px;
+            font-size: 1.5rem;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 15px rgba(0, 170, 255, 0.2);
+        }
+
+        html.light .cta-btn {
+            color: #ffffff;
+        }
+
+        .cta-btn:hover {
+            background: var(--cyan);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 229, 255, 0.3);
+        }
+
+        /* Typography & Links */
+        p {
+            margin-bottom: 24px;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        a {
+            color: var(--neon);
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--cyan);
+            text-shadow: 0 0 8px var(--border-glow);
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 36px;
+            margin-bottom: 18px;
+        }
+
+        ul li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--cyan);
+            font-weight: bold;
+        }
+
+        /* Collapsible Sections */
+        .sections-container {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            margin-bottom: 120px;
+        }
+
+        .section-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            scroll-margin-top: 140px;
+        }
+
+        .section-card:hover {
+            border-color: var(--border-glow);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            padding: 28px 32px;
+            cursor: pointer;
+            user-select: none;
+            background: transparent;
+        }
+
+        .sec-num {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--neon);
+            margin-right: 24px;
+            flex-shrink: 0;
+        }
+
+        .section-card:hover .sec-num {
+            background: rgba(0, 170, 255, 0.1);
+            border-color: var(--neon);
+        }
+
+        .section-title {
+            font-size: 1.875rem;
+            font-weight: 600;
+            color: var(--text-bright);
+            flex-grow: 1;
+            margin: 0;
+        }
+
+        .sec-toggle {
+            color: var(--text-dim);
+            font-size: 2.25rem;
+            font-weight: 300;
+            width: 36px;
+            text-align: center;
+            transition: transform 0.3s ease, color 0.2s ease;
+        }
+
+        .section-card:hover .sec-toggle {
+            color: var(--neon);
+        }
+
+        .section-body {
+            display: grid;
+            grid-template-rows: 1fr;
+            transition: grid-template-rows 0.3s ease-out;
+        }
+
+        .section-body.collapsed {
+            grid-template-rows: 0fr;
+        }
+
+        .section-content {
+            overflow: hidden;
+        }
+
+        .section-inner {
+            padding: 0 32px 32px 100px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 16px 0;
+            }
+            .header-content {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+            }
+            .header-nav {
+                width: 100%;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+            .header-name {
+                font-size: 1.8rem;
+            }
+            .hero {
+                padding: 40px 0 80px;
+            }
+            .section-inner {
+                padding: 0 24px 24px 24px;
+            }
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+            .hero-line {
+                font-size: 1.6rem;
+            }
+            .orb {
+                display: none;
+            }
+        }
+
+        /* Footer */
+        footer {
+            padding: 60px 0;
+            text-align: center;
+            border-top: 1px solid var(--border);
+            color: var(--text-dim);
+            font-size: 1.275rem;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+    </style>
+
+    <script>
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light') {
+            document.documentElement.classList.add('light');
+        }
+    </script>
+</head>
+<body>
+
+    <div class="bg-gradient"></div>
+    <div class="bg-grid"></div>
+    <div class="bg-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <header>
+        <div class="container header-content">
+            <div class="header-brand">
+                <div class="header-name">Femi Akin-Laguda</div>
+            </div>
+
+            <nav class="header-nav">
+                <a href="#approach" class="nav-link">Approach</a>
+                <a href="#track-record" class="nav-link">Track Record</a>
+                <a href="#expertise" class="nav-link">Expertise</a>
+                <a href="#collaborate" class="nav-link">Collaborate</a>
+            </nav>
+
+            <div class="header-controls" id="controls">
+                <button class="icon-btn" id="theme-btn" title="Toggle Light/Dark Theme">
+                    <svg class="moon-icon" viewBox="0 0 24 24">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="sun-icon" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <button class="icon-btn expand-mode" id="toggle-all-btn" title="Collapse/Expand All Sections">
+                    <svg class="collapse-icon" viewBox="0 0 24 24">
+                        <polyline points="4 14 12 6 20 14"></polyline>
+                    </svg>
+                    <svg class="expand-icon" viewBox="0 0 24 24">
+                        <polyline points="4 10 12 18 20 10"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <span class="hero-role">Corporate Strategist & Operations Expert</span>
+            <h1>Building and empowering great teams to drive growth and operational excellence.</h1>
+            <p class="hero-line">I develop solutions to strategic, operational, and growth challenges for companies in fast-changing, disrupted industries using data-driven decision-making and a little elbow grease.</p>
+            <a href="https://www.linkedin.com/in/femiakinlaguda/" class="cta-btn">Collaborate With Me</a>
+        </section>
+
+        <div class="sections-container" id="sections">
+
+            <div class="section-card" id="approach">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <div class="sec-num">1</div>
+                    <h2 class="section-title">My Approach & Vision</h2>
+                    <div class="sec-toggle">−</div>
+                </div>
+                <div class="section-body">
+                    <div class="section-content">
+                        <div class="section-inner">
+                            <p>My methodology is grounded in an energetic, pragmatic, and determined approach to problem-solving. I thrive in dynamic environments where rapid market shifts demand robust operational frameworks.</p>
+                            <p>Whether navigating complex regional regulatory landscapes or engineering scalable fleet intelligence frameworks, my vision centres on empowering teams with the autonomy and structure they need to consistently deliver exceptional, sustainable results.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-card" id="track-record">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <div class="sec-num">2</div>
+                    <h2 class="section-title">Track Record</h2>
+                    <div class="sec-toggle">−</div>
+                </div>
+                <div class="section-body">
+                    <div class="section-content">
+                        <div class="section-inner">
+                            <ul>
+                                <li><strong>ChargeAM:</strong> Architected the foundational operational infrastructure for a newly established EV logistics vertical.</li>
+                                <li><strong>MAX:</strong> Built a Mobility-as-a-Service project that secured over $22m in funding to deliver over 1,000 electric cars and supporting infrastructure in Africa.</li>
+                                <li><strong>Bolt:</strong> Led market expansion, growing operations from 1 to 33 cities in 4 years and managing a Country P&L that grew from €45m to €245m.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-card" id="expertise">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <div class="sec-num">3</div>
+                    <h2 class="section-title">Core Expertise</h2>
+                    <div class="sec-toggle">−</div>
+                </div>
+                <div class="section-body">
+                    <div class="section-content">
+                        <div class="section-inner">
+                            <p>My professional capabilities span the intersection of rapid business growth and structured, resilient operations:</p>
+                            <ul>
+                                <li><strong>Operations Management:</strong> Architecting foundational infrastructure, optimising unit economics, and executing large-scale, complex logistics.</li>
+                                <li><strong>Corporate Strategy:</strong> Navigating competitive landscapes, developing strategic partnerships, and managing public policy advocacy.</li>
+                                <li><strong>Shared Mobility & Ecosystems:</strong> Proven expertise in scaling ride-hailing and e-mobility fleets across diverse geographies.</li>
+                                <li><strong>Team Leadership:</strong> Building award-winning, cross-functional teams and fostering environments that drive retention and high performance.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-card" id="collaborate">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <div class="sec-num">4</div>
+                    <h2 class="section-title">Let's Collaborate</h2>
+                    <div class="sec-toggle">−</div>
+                </div>
+                <div class="section-body">
+                    <div class="section-content">
+                        <div class="section-inner">
+                            <p>I am actively exploring strategic opportunities and partnerships. Whether you are scaling an innovative e-mobility vertical, establishing foundational infrastructure for a rapid-growth startup, or exploring the acquisition and strategic turnaround of SMEs here in Ireland, I bring the strategic adaptability and operational rigour necessary to execute.</p>
+                            <p>Connect with me via my professional network to discuss how we can build something impactful together.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div>&copy; 2026 Femi Akin-Laguda.</div>
+            <div>Hosted on GitHub.</div>
+        </div>
+    </footer>
+
+    <script>
+        // Theme Toggle Logic
+        const themeBtn = document.getElementById('theme-btn');
+        themeBtn.addEventListener('click', () => {
+            const html = document.documentElement;
+            html.classList.toggle('light');
+            const isLight = html.classList.contains('light');
+            localStorage.setItem('theme', isLight ? 'light' : 'dark');
+        });
+
+        // Individual Section Toggle Logic
+        function toggleSection(header) {
+            const body = header.nextElementSibling;
+            const toggleIcon = header.querySelector('.sec-toggle');
+            const isCollapsed = body.classList.contains('collapsed');
+
+            if (isCollapsed) {
+                body.classList.remove('collapsed');
+                toggleIcon.textContent = '−';
+            } else {
+                body.classList.add('collapsed');
+                toggleIcon.textContent = '+';
+            }
+            syncGlobalToggleState();
+        }
+
+        // Global Expand/Collapse Logic
+        const toggleAllBtn = document.getElementById('toggle-all-btn');
+        const sectionBodies = document.querySelectorAll('.section-body');
+        const sectionIcons = document.querySelectorAll('.sec-toggle');
+
+        function syncGlobalToggleState() {
+            const allCollapsed = Array.from(sectionBodies).every(body => body.classList.contains('collapsed'));
+            if (allCollapsed) {
+                toggleAllBtn.classList.remove('expand-mode');
+            } else {
+                toggleAllBtn.classList.add('expand-mode');
+            }
+        }
+
+        toggleAllBtn.addEventListener('click', () => {
+            const isExpandMode = toggleAllBtn.classList.contains('expand-mode');
+
+            if (isExpandMode) {
+                sectionBodies.forEach(body => body.classList.add('collapsed'));
+                sectionIcons.forEach(icon => icon.textContent = '+');
+                toggleAllBtn.classList.remove('expand-mode');
+            } else {
+                sectionBodies.forEach(body => body.classList.remove('collapsed'));
+                sectionIcons.forEach(icon => icon.textContent = '−');
+                toggleAllBtn.classList.add('expand-mode');
+            }
+        });
+
+        // Automatically expand section on anchor click
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                const targetId = link.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                if (targetSection) {
+                    const body = targetSection.querySelector('.section-body');
+                    const toggleIcon = targetSection.querySelector('.sec-toggle');
+                    if (body.classList.contains('collapsed')) {
+                        body.classList.remove('collapsed');
+                        toggleIcon.textContent = '−';
+                        syncGlobalToggleState();
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
